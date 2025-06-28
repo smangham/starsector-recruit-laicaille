@@ -1,4 +1,4 @@
-# Starsector IntelliJ Mod Template
+# Recruit Laicaille Administrator
 
 ## Description
 
