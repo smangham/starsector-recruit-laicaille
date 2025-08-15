@@ -1,3 +1,31 @@
 id,trigger,conditions,script,text,options,notes
 # This file is not required by the game and can be deleted if you aren't using it, but doesn't hurt to keep either.
 # Official rules.csv guide: https://fractalsoftworks.com/2023/11/13/you-merely-adopted-rules-csv-i-was-born-into-it/
+toasterRecruitLaicailleOffer1,PopulateOptions,"$tag:involuntary_retirement
+$market.id == laicaille_habitat
+$askedAboutArchon
+!$offered_job",,,"toasterRecruitLaicailleOffer2:""I'm looking for a principled administrator."""
+toasterRecruitLaicailleOffer2,DialogOptionSelected,$option == toasterRecruitLaicailleOffer2,"AddText ""As you talk, you gauge $personName's likely skills:""
+toaster_recruit_DisplaySkill toaster_recruit_independent_minded 2
+","$HeOrShe pauses for a moment, then responds. ""It certainly is all about who you know, isn't it. I won't spend time speculating over whether you're motivated by guilt or interest. My options here have narrowed, and it's time for me to leave if I want to make anything of my life.""",toasterRecruitLaicailleOffer2a:Continue,
+toasterRecruitLaicailleOffer2a,DialogOptionSelected,$option == toasterRecruitLaicailleOffer2a,"SetStoryOption toasterRecruitLaicailleOffer4 1 toasterRecruitLaicaille ui_char_spent_story_point_leadership  ""Persuaded dismissed Persean League administrator to work for you.""
+SetShortcut cutCommLink ""ESCAPE""
+$offered_job = true 0","""I have a question for you, though, Captain. You've seen that I was a liability to the Gens because I put the League's ideals over politics, and didn't defer to my 'superiors'. Knowing that, why do you want to hire me?""","toasterRecruitLaicailleOffer4:""Out of the core, it's a lack of independence that's the greatest liability.""
+cutCommLink:""Actually, let me get back to you later."""
+toasterRecruitLaicailleOffer3,PopulateOptions,$offered_job,"SetStoryOption toasterRecruitLaicailleOffer4 1 toasterRecruitLaicaille ui_char_spent_story_point_leadership  ""Persuaded dismissed Persean League administrator to work for you.""
+SetShortcut cutCommLink ""ESCAPE""","""Captain $playerName. Have you thought of a good reason to hire a disgraced former archon?""","toasterRecruitLaicailleOffer4:""Out of the core, it's a lack of independence that's the greatest liability.""
+cutCommLink:""Actually, let me get back to you later.""",
+toasterRecruitLaicailleOffer4,DialogOptionSelected,$option == toasterRecruitLaicailleOffer4,"toaster_recruit_HireActivePerson true true
+toaster_recruit_AddSkillToActivePerson toaster_recruit_independent_minded 2
+toaster_recruit_ApplyTemporaryAdminNumber toaster_recruit_independent_minded_admin_number 1
+unset $offered_job
+","$HeOrShe thinks for a moment, then cracks a small smile.
+
+""So it's not who you know, it's the unknowns. There are worse things out there than the Gens.""
+
+""I accept your offer, Captain. Though I still hope I won't have to sacrifice as much for it as I have for Laicaille.""",toasterRecruitLaicailleOffer5:Continue,
+toasterRecruitLaicailleOffer5,DialogOptionSelected,$option == toasterRecruitLaicailleOffer5,"AddTextSmall ""Recruited new Administrator"" highlight
+AddTextSmall ""Temporarily increased Administrator limit by 1"" highlight","Though you offer to send a team to help $entityName pack, $heOrShe turns it down. After a short time, their belongings are loaded onto a waiting shuttle and from there, they join your fleet - ready to depart for their new post.
+
+For better or worse, Laicaille is behind them.
+",defaultLeave:Leave

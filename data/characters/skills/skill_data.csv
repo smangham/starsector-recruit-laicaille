@@ -1,0 +1,2 @@
+id,name,order,tier,reqPoints,reqPointsPerExtraSkill,description,author,combat officer,admiral,admin,tags,icon,
+toaster_recruit_independent_minded,Independent Minded,1,0,,,Laicalle Habitat is not a pawn to be pushed around by the gens of Kazeron!,"Persean League Executive Board minutes, unpublished",,,TRUE,npc_only,graphics/icons/skills/toaster/recruit/independent_minded.png

@@ -1,7 +1,6 @@
 package toaster.recruit;
 
 import com.fs.starfarer.api.BaseModPlugin;
-import com.fs.starfarer.api.Global;
 
 public class TemplateModPlugin extends BaseModPlugin {
     @Override
@@ -9,7 +8,7 @@ public class TemplateModPlugin extends BaseModPlugin {
         super.onApplicationLoad();
 
         // Test that the .jar is loaded and working, using the most obnoxious way possible.
-        throw new RuntimeException("Template mod loaded and working!\nRemove this crash in TemplateModPlugin.");
+//        throw new RuntimeException("Template mod loaded and working!\nRemove this crash in TemplateModPlugin.");
     }
 
     @Override
