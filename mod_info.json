@@ -1,6 +1,6 @@
 {
   "id": "toaster_recruit",
-  "name": "Recruit Lacaille Administrator",
+  "name": "Recruit Laicaille Administrator",
   "author": "Wisp",
   "utility": false,
   "version": {
@@ -8,7 +8,7 @@
     "minor": '0',
     "patch": '0'
   },
-  "description": "Starsector IntelliJ template.",
+  "description": "Allows you to recruit the dismissed former Archon of Laicaille Habitat.",
   "gameVersion": "0.98a-RC8",
   "jars": [ "jars/toaster_recruit.jar" ],
   "modPlugin": "toaster.recruit.TemplateModPlugin",

@@ -12,9 +12,10 @@ toasterRecruitLaicailleOffer2a,DialogOptionSelected,$option == toasterRecruitLai
 SetShortcut cutCommLink ""ESCAPE""
 $offered_job = true 0","""I have a question for you, though, Captain. You've seen that I was a liability to the Gens because I put the League's ideals over politics, and didn't defer to my 'superiors'. Knowing that, why do you want to hire me?""","toasterRecruitLaicailleOffer4:""Out of the core, it's a lack of independence that's the greatest liability.""
 cutCommLink:""Actually, let me get back to you later."""
-toasterRecruitLaicailleOffer3,PopulateOptions,$offered_job,"SetStoryOption toasterRecruitLaicailleOffer4 1 toasterRecruitLaicaille ui_char_spent_story_point_leadership  ""Persuaded dismissed Persean League administrator to work for you.""
-SetShortcut cutCommLink ""ESCAPE""","""Captain $playerName. Have you thought of a good reason to hire a disgraced former archon?""","toasterRecruitLaicailleOffer4:""Out of the core, it's a lack of independence that's the greatest liability.""
-cutCommLink:""Actually, let me get back to you later.""",
+toasterRecruitLaicailleOffer3,PopulateOptions,$offered_job,,,"toasterRecruitLaicailleOffer3a:""Let's talk business.""",
+toasterRecruitLaicailleOffer3a,DialogOptionSelected,$option == toasterRecruitLaicailleOffer3a,"SetStoryOption toasterRecruitLaicailleOffer4 1 toasterRecruitLaicaille ui_char_spent_story_point_leadership  ""Persuaded dismissed Persean League administrator to work for you.""
+SetShortcut cutCommLink ""ESCAPE""","""So, have you thought of a good reason to hire a disgraced former archon?""","toasterRecruitLaicailleOffer4:""Out of the core, it's a lack of independence that's the greatest liability.""
+cutCommLink:""Actually, let me get back to you later."""
 toasterRecruitLaicailleOffer4,DialogOptionSelected,$option == toasterRecruitLaicailleOffer4,"toaster_recruit_HireActivePerson true true
 toaster_recruit_AddSkillToActivePerson toaster_recruit_independent_minded 2
 toaster_recruit_ApplyTemporaryAdminNumber toaster_recruit_independent_minded_admin_number 1
