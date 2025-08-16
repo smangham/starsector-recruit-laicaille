@@ -1,7 +1,9 @@
-package com.fs.starfarer.api.impl.campaign.rulecmd;
+package toaster.recruit.campaign.rulecmd;
 
 import java.util.List;
 import java.util.Map;
+
+import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import org.apache.log4j.Logger;
 
 import com.fs.starfarer.api.Global;

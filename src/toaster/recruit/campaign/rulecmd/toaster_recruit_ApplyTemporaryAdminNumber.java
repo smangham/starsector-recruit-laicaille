@@ -1,9 +1,10 @@
-package com.fs.starfarer.api.impl.campaign.rulecmd;
+package toaster.recruit.campaign.rulecmd;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
+import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.util.Misc.Token;
 import org.apache.log4j.Logger;
 

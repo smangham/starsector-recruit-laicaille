@@ -1,4 +1,4 @@
-package com.fs.starfarer.api.impl.campaign.rulecmd;
+package toaster.recruit.campaign.rulecmd;
 
 import java.util.List;
 import java.util.Map;
